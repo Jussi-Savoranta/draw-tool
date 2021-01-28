@@ -43,8 +43,7 @@
         ctx1.globalCompositeOperation="source-over";
         ctx1.strokeStyle = lastHue;
       }
-      
-      
+       
 
       ctx1.beginPath();
       ctx1.moveTo(lastX, lastY);
@@ -73,10 +72,6 @@
 
         erasing = false;
       }
-
-     
-      
-   
 
     }
 
@@ -115,9 +110,6 @@
         document.body.removeChild(a);
       }
      
-     
-       
-
 
       function colorBoxHanler() {
         document.getElementById('eraserBox').checked = false;
@@ -136,8 +128,7 @@
         ctx0.fillRect(0, 0, canvas1.width, canvas1.height);
         //ctx1.getImageData(0, 0, width, height);
       }
-
-      
+  
        
     const bacgroundInput = document.querySelectorAll('.controls input[id=canvasColor]');
     const widthInput = document.querySelectorAll('.controls input[id=width]');
