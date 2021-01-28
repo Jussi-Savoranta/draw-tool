@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Draw Something</title>
+</head>
+<body>
+  <style>
+
+
+
+/* Create two unequal columns that floats next to each other */
+.column {
+  float: left;
+  /*padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+.left {
+  width: 75%;
+}
+
+.right {
+  width: 25%;
+}
+.controls {
+  padding-left: 35px;
+}
+/* Clear floats after the columns */
+.controls:after {
+  content: "";
+   display: table;
+   clear: both;
+}
+  html, body {
+    margin: 0;
+}
+html {
+    font-family: 'helvetica neue';
+    font-size: 20px;
+    font-weight: 200;
+    text-align: center;
+    background-color: #aaa;
+}
+
+  </style>
+
+  <h1>Draw something</h1>
+
+    <div class="column left" id="column left" style="background-color:#ffffff;">
+      <canvas id="layer1" width="800" height="800"></canvas>
+      <canvas id="layer2" width="800" height="800" style="visibility:hidden; position: absolute; left: 0; top: 50;"></canvas>
+      <canvas id="layer3" width="800" height="800" style="visibility:hidden; position: absolute; left: 0; top: 50;"></canvas>
+    
+    </div>
+        <div class="column right" style="background-color:#aaa;">
+            <div class="controls" style="text-align: justify;">
+             
+                <label for="canvasColor">Background: </label>
+                <input id="canvasColor" type="color" name="canvasColor" value="#ffffff">
+              
+              <p id="brushWidth"></p>
+              <input id="width" type="range" name= "width" min= "1" max="20" data-sizing="px">
+              <div class= "hue">
+                  <label for="Brush"></label><p></p>
+                    <input type="checkbox" id="colorBox">
+                    <label for="brushColor">Color: </label>
+                    <input id="brushColor" type="color" name="brushColor" value="#a000b7">
+              </div>
+              <div class="eraserBox">
+                <input type="checkbox" id="eraserBox" name="eraserBox">
+                <label for="eraser">Eraser</label><br>
+              </div>
+              <button onClick="save()">Save drawing</button>
+              
+            </div>
+        </div>
+    </div>
+
+
+    <script src="scripts.js"></script>
+
+
+
+</body>
+</html>
